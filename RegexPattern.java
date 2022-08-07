@@ -8,14 +8,15 @@ public class RegexPattern {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Last name : ");
-		String lastName = sc.nextLine();
 
-		boolean validatelastName = Pattern.matches("^[A-Z]{1}[a-z]{2,20}$", lastName);
-		if (validatelastName) {
-			System.out.println("lastname is correct ");
+		System.out.println("Enter the Email address : ");
+		String email = sc.nextLine();
+
+		boolean validateEmail = Pattern.matches("^[a-z](.+)@(\\S+)$", email);
+		if (validateEmail) {
+			System.out.println(" Eamil is correct ");
 		} else {
-			System.out.println("lastname is incorrect ");
+			System.out.println("Email is incorrect ");
 		}
 	}
 
