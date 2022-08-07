@@ -9,14 +9,14 @@ public class RegexPattern {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter the Email address : ");
-		String email = sc.nextLine();
+		System.out.println("Enter the Phone number : ");
+		String phoneNumber = sc.nextLine();
 
-		boolean validateEmail = Pattern.matches("^[a-z](.+)@(\\S+)$", email);
-		if (validateEmail) {
-			System.out.println(" Eamil is correct ");
+		boolean validatephoneNumber = Pattern.matches("^((91){1})? ?[0-9]{9}$", phoneNumber);
+		if (validatephoneNumber) {
+			System.out.println("phone number is correct ");
 		} else {
-			System.out.println("Email is incorrect ");
+			System.out.println("phone number is incorrect ");
 		}
 	}
 
