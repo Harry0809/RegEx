@@ -7,14 +7,15 @@ public class RegexPattern {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Password : ");
-		String password = sc.nextLine();
-		boolean validatePassword = Pattern
-				.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>])(?=.*[0-9]).{8,}$", password);
-		if (validatePassword) {
-			System.out.println("password is correct ");
+
+		System.out.println("Enter the Email address : ");
+		String email = sc.nextLine();
+		boolean validateEmail = Pattern.matches("^[a-z]*.[a-z0-9]+@-_[a-z]{2,3}(.[a-z]{3})*$", email);
+
+		if (validateEmail) {
+			System.out.println("Email is correct ");
 		} else {
-			System.out.println("password is incorrect ");
+			System.out.println("Email is incorrect ");
 		}
 	}
 
