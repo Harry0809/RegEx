@@ -10,7 +10,7 @@ public class RegexPattern {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Password : ");
 		String password = sc.nextLine();
-		boolean validatePassword = Pattern.matches("^(?=.*[a-z]).{8,}$", password);
+		boolean validatePassword = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$", password);
 		if (validatePassword) {
 			System.out.println("password is correct ");
 		} else {
